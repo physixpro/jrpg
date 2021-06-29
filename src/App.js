@@ -1,5 +1,5 @@
 import Player from "./components/player/Player";
-import Sprite from "./components/Sprite";
+
 import "./App.css";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
   
   return (
     <div>
-   <Player skin="f1" />
+   <Player skin="m1" />
    
     </div>
   );
