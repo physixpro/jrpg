@@ -6,7 +6,7 @@ const Actor = ({sprite, data, step = 0, dir = 0}) => {
     return (
         <div>
 <Sprite
-        image={"/sprites/skins/m1.png"}
+        image={sprite}
         data={{
           x: step * w,
           y: dir * h,
