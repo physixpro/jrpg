@@ -1,9 +1,10 @@
 import React from 'react'
 import Actor from '../actor/Actor'
+import Usewalk from '../../hooks/use-key-press/Usewalk'
 import Usekeypress from '../../hooks/use-key-press/Usekeypress'
 
 const Player = ({skin}) => {
-
+const {dir, step, walk } = Usewalk(3)
     const data = {
         h:32,
         w:32,
@@ -18,7 +19,7 @@ const Player = ({skin}) => {
 
       Usekeypress((e) => {
           const dir = e.key.replace("Arrow", "").toLowerCase();
-          if(directions.hasOwnProperty(dir)) console.dir(dir);
+          walk(dir)
           
           e.preventDefault();
       })
