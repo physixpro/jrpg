@@ -25,7 +25,7 @@ const {dir, step, walk } = Usewalk(3)
       })
     return (
         <div>
-             <Actor sprite={`/sprites/skins/${skin}.png`} data={data}/>
+             <Actor sprite={`/sprites/skins/${skin}.png`} data={data}  step={step} dir={dir}/>
         </div>
     )
 }
