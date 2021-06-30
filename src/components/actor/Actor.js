@@ -1,11 +1,17 @@
-import React from 'react';
+import React from "react";
 import Sprite from "../Sprite";
 
-const Actor = ({sprite, data, position={x:0, y: 0}, step = 0, dir = 0}) => {
-    const { h, w} = data;
-    return (
-        <div>
-<Sprite
+const Actor = ({
+  sprite,
+  data,
+  position = { x: 0, y: 0 },
+  step = 0,
+  dir = 0,
+}) => {
+  const { h, w } = data;
+  return (
+    <div>
+      <Sprite
         image={sprite}
         position={position}
         data={{
@@ -15,8 +21,8 @@ const Actor = ({sprite, data, position={x:0, y: 0}, step = 0, dir = 0}) => {
           h,
         }}
       />
-        </div>
-    )
-}
+    </div>
+  );
+};
 
-export default Actor
+export default Actor;
