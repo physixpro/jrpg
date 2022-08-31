@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Usewalk = (maxSteps) => {
   const [position, setPosition] = useState({x:0,y:0});
   const [dir, setDir] = useState(0);
-  const [step, setStep] = useState(0);
+ // const [step, setStep] = useState(0);
 
   const directions = {
     down: 0,
@@ -21,12 +21,13 @@ const Usewalk = (maxSteps) => {
     up: { x: 0, y: -stepSize },
   };
 
+  // this is what makes the sprite face a direction (directions object used here)
   const walk = (dir) => {
     setDir((prev) => {
       if (directions[dir] === prev) move(dir);
       return directions[dir];
     });
-    setStep((prev) => (prev < maxSteps - 1 ? prev + 1 : 0));
+  //  setStep((prev) => (prev < maxSteps - 1 ? prev + 1 : 0));
   };
 
   const move = (dir) => {
@@ -35,7 +36,7 @@ const Usewalk = (maxSteps) => {
       y: prev.y + modifier[dir].y,
     }));
   };
-  return  { walk, dir, step, position };
+  return  { walk, dir, position };
 };
 
 export default Usewalk;

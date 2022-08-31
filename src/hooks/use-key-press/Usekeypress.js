@@ -1,11 +1,11 @@
 import React, {useEffect} from 'react'
 
-const Usekeypress = (fn) => {
+const Usekeypress = (press) => {
 
 useEffect( () => {
-window.addEventListener("keydown", fn)
-return () => window.removeEventListener("keydown", fn);
-},[fn])
+window.addEventListener("keydown", press)
+return () => window.removeEventListener("keydown", press);
+},[press])
 
     return (
         <div>
